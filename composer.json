@@ -1,20 +1,7 @@
 {
-    "name": "marc-mabe/php-enum",
-    "description": "Simple and fast implementation of enumerations with native PHP",
+    "name": "ocramius/marc-mabe-php-enum-temp-release",
+    "description": "Temporary release of marc-mabe/php-enum ",
     "type": "library",
-    "keywords": [
-        "enum", "enumeration", "enumerator",
-        "enumset", "enum-set", "set",
-        "enummap", "enum-map", "map",
-        "type", "typehint", "type-hint"
-    ],
-    "homepage": "https://github.com/marc-mabe/php-enum",
-    "authors": [{
-        "name":     "Marc Bennewitz",
-        "email":    "dev@mabe.berlin",
-        "homepage": "http://mabe.berlin/",
-        "role":     "Lead"
-    }],
     "license": "BSD-3-Clause",
     "require": {
         "php":            ">=7.1",
@@ -25,6 +12,12 @@
         "phpbench/phpbench": "^0.16.1",
         "vimeo/psalm": "^3.10"
     },
+    "provide": {
+        "marc-mabe/php-enum": "self.version"
+    },
+    "replace": {
+        "marc-mabe/php-enum": "self.version"
+    },
     "autoload": {
         "psr-4": {
             "MabeEnum\\": "src/"
@@ -34,14 +27,6 @@
         "psr-4": {
             "MabeEnumTest\\":  "tests/MabeEnumTest/",
             "MabeEnumBench\\": "bench/"
-        }
-    },
-    "extra": {
-        "branch-alias": {
-            "dev-master": "4.0-dev",
-            "dev-3.x":    "3.1-dev",
-            "dev-2.x":    "2.3-dev",
-            "dev-1.x":    "1.3-dev"
         }
     }
 }
